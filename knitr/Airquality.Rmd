@@ -39,22 +39,22 @@ Here is a plot of each pair of variables against one another.
 pairs(airquality)
 ```
 
-We will test a regression model of Ozone versus Solar Radiation.
+We will test a regression model of Ozone versus Temperature.
 
 ```{r}
 library(stats)
-fit <- lm(Ozone ~ Solar.R, airquality)
+fit <- lm(Ozone ~ Temp, airquality)
 summary(fit)
 ```
 
 Next, we plot the regression line.
 
 ```{r}
-y <- airquality$Solar.R 
-x <- airquality$Ozone
+x <- airquality$Temp 
+y <- airquality$Ozone
 
-plot(y,x)
+plot(x,y)
 abline(fit)
 ```
 
-In conclusion, I have realized that the gap in my understanding is in interpreting measures of significance for regression lines. I am also unsure how to interpret the Mean Squared Error, whether it should be close to zero or not. Therefore, the next step in my education is learning Hypothesis Testing for regression analysis.
+We can see that temperature may be a good predictor for Ozone levels, leading us to believe that increasing temperatures may positively correlate to increasing Ozone levels.
