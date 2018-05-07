@@ -12,6 +12,18 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Based from the Coursera course "Reproducible Research" by Johns Hopkins University
+The goal of this document is to provide an example of "literate statistical programming" by "weaving" together English text, R Code, and graphics provided by ggplot and R's builtin plotting capabilities.
+
+"Literate statistical programming" with R Markdown files allows for "reproducible" research through the ability of the critic to 
+
+1. Download the markdown file
+
+2. Re-run the analyses in R
+
+3. Regenerate the HTML (or pdf) 
+
+In this document, we provide a means to load an airquality dataset from the datasets library in R. 
+
 
 ```{r}
 library(datasets)
@@ -19,7 +31,9 @@ data(airquality)
 summary(airquality)
 ```
 
-Here is a pair plot of the data.
+As can be seen, the variables within the data set are Ozone levels, Solar Radiation levels, Wind, Temperature, Month, and Day measurements.
+
+Here is a plot of each pair of variables against one another.
 
 ```{r}
 pairs(airquality)
