@@ -22,7 +22,7 @@ The goal of this document is to provide an example of "literate statistical prog
 
 3. Regenerate the HTML (or pdf) 
 
-In this document, we provide a means to load an airquality dataset from the datasets library in R. 
+In this document, we provide a regression analysis of air quality data.
 
 
 ```{r}
