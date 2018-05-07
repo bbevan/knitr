@@ -1,0 +1,44 @@
+---
+title: "Air Quality"
+author: "Brandon Bevan"
+date: "May 7, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Based from the Coursera course "Reproducible Research" by Johns Hopkins University
+
+```{r}
+library(datasets)
+data(airquality)
+summary(airquality)
+```
+
+Here is a pair plot of the data.
+
+```{r}
+pairs(airquality)
+```
+
+We will test a regression model of Ozone versus Solar Radiation.
+
+```{r}
+library(stats)
+fit <- lm(Ozone ~ Solar.R, airquality)
+summary(fit)
+```
+
+Next, we plot the regression line.
+
+```{r}
+y <- airquality$Solar.R 
+x <- airquality$Ozone
+
+plot(y,x)
+abline(fit)
+```
+
+In conclusion, I have realized that the gap in my understanding is in interpreting measures of significance for regression lines. I am also unsure how to interpret the Mean Squared Error, whether it should be close to zero or not. Therefore, the next step in my education is learning Hypothesis Testing for regression analysis.
